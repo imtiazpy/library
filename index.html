@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-Archive</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- stylesheet  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">Book-Archive</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="text-center mt-3">Search Your Favorite Book</h2>
+
+        <!-- Search Field -->
+        <section class="container mt-3 w-50">
+            <form>
+                <div class="input-group mb-3">
+                    <input id="search-field" type="text" class="form-control" placeholder="Search the book you want"
+                        aria-describedby="button">
+                    <button class="btn btn-outline-secondary" type="submit" id="search-btn">
+                        Search
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- loading spinner -->
+        <div id="spinner" class="text-center d-none">
+            <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                Loading...
+            </button>
+        </div>
+
+
+        <!-- error message -->
+        <div class="container text-center">
+            <h4 id="error-message" class="bg-danger p-1 d-none"></h4>
+        </div>
+
+        <!-- Search Result -->
+        <section class="container">
+            <!-- showing how many search results are found -->
+            <h4 id="total-found" class="text-center bg-info mb-3"></h4>
+
+            <!-- showing search results -->
+            <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- columns will be generated dynamically. -->
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- External script  -->
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
